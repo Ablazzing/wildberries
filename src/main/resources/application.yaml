@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    hibernate:
+      show-sql: true
+      ddl-auto: create
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wildberries
+    username: postgres
+    password: terrrr
+    driverClassName: org.postgresql.Driver
+
+    hikari:
+      transaction-isolation: TRANSACTION_READ_UNCOMMITTED
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        orm:
+          jdbc:
+            bind: TRACE
